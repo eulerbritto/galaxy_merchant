@@ -1,0 +1,27 @@
+<div class="content-title">
+  <h1 class="title">{{ title }}</h1>
+</div>
+<div id="content-main">
+    <label class="command-title">Answers</label>
+  <ul class="answer">
+      <li id="li_m" *ngFor="let resp of answers">
+        <span>
+        {{resp}}
+        </span>
+      </li>
+	</ul>
+</div>
+<div id="content-right">
+  <label class="command-title">Commands</label>
+  <ul class="history">
+    <li id="li_h" *ngFor="let item of input_commands">
+      <span>
+      {{item}}
+      </span>
+    </li>
+  </ul>
+</div>
+<div class="footer">
+  <input type="text" [(ngModel)]="input_command" placeholder="type the command">
+  <button type="button" (click)="add()">DO</button>
+</div>
